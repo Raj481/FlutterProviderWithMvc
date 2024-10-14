@@ -14,13 +14,15 @@ export "package:provider_mvc_sample/res/strings_res.dart";
 
 /// Base Imports
 export 'package:provider_mvc_sample/base/provider/base_provider.dart';
+export 'package:provider_mvc_sample/base/network/base_services.dart';
+export 'package:provider_mvc_sample/base/network/models/base_model.dart';
 
 /// CORE imports
 export "package:provider_mvc_sample/core/network/api_services.dart";
 export "package:provider_mvc_sample/core/network/network_client.dart";
 export "package:provider_mvc_sample/core/config_res.dart";
 
-/// utils imports
+/// Utils imports
 export "package:provider_mvc_sample/utils/global.dart";
 export "package:provider_mvc_sample/utils/mixins/app_helper.dart";
 export "package:provider_mvc_sample/utils/exceptions/exceptions.dart";
