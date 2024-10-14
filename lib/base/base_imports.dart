@@ -26,3 +26,6 @@ export "package:provider_mvc_sample/utils/mixins/app_helper.dart";
 export "package:provider_mvc_sample/utils/exceptions/exceptions.dart";
 export "package:provider_mvc_sample/utils/firebase/firebase_helper.dart";
 export "package:provider_mvc_sample/utils/firebase/notification_helper.dart";
+
+/// Common Imports
+export 'package:provider/provider.dart';
