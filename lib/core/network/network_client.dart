@@ -8,7 +8,6 @@ class NetworkClient extends BaseServices {
     dynamic args,
     dynamic headers,
   }) {
-    // TODO: implement delete
     throw UnimplementedError();
   }
 
@@ -17,9 +16,8 @@ class NetworkClient extends BaseServices {
     String url, {
     dynamic args,
     dynamic headers,
-  }) {
-    // TODO: implement get
-    throw UnimplementedError();
+  }) async {
+    return await http.get(Uri.parse(url));
   }
 
   @override
@@ -28,7 +26,6 @@ class NetworkClient extends BaseServices {
     dynamic args,
     dynamic headers,
   }) {
-    // TODO: implement patch
     throw UnimplementedError();
   }
 
@@ -38,7 +35,6 @@ class NetworkClient extends BaseServices {
     dynamic args,
     dynamic headers,
   }) {
-    // TODO: implement post
     throw UnimplementedError();
   }
 }
