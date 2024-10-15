@@ -25,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
           appBar: AppBar(
             centerTitle: true,
             title: Text(
-              "Posts",
+              "Posts".toUpperCase(),
               style: TextStyle(
                 fontSize: 18,
               ),
