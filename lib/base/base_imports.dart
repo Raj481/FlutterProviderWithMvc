@@ -17,7 +17,7 @@ export "package:provider_mvc_sample/res/strings_res.dart";
 /// Base Imports
 export 'package:provider_mvc_sample/base/provider/base_provider.dart';
 export 'package:provider_mvc_sample/base/network/base_services.dart';
-export 'package:provider_mvc_sample/base/network/models/base_model.dart';
+export 'package:provider_mvc_sample/base/network/models/base_response.dart';
 
 /// CORE imports
 export "package:provider_mvc_sample/core/network/api_services.dart";
