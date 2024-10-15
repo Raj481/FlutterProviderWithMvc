@@ -2,10 +2,12 @@ export 'package:flutter/material.dart';
 
 /// Screen Imports
 export 'package:provider_mvc_sample/features/splash/splash_screen.dart';
+export 'package:provider_mvc_sample/features/home/home_screen.dart';
 
 /// Provider or Controller Imports
 export 'package:provider_mvc_sample/app.dart';
 export 'package:provider_mvc_sample/features/splash/provider/splash_provider.dart';
+export 'package:provider_mvc_sample/features/home/provider/home_provider.dart';
 
 /// Resources Imports
 export "package:provider_mvc_sample/res/image_res.dart";

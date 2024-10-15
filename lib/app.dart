@@ -10,9 +10,12 @@ class App extends StatelessWidget {
         ChangeNotifierProvider(
           create: (_) => SplashProvider(),
         ),
+        ChangeNotifierProvider(
+          create: (_) => HomeProvider(),
+        ),
       ],
       child: MaterialApp(
-        home: SplashScreen(),
+        home: HomeScreen(),
       ),
     );
   }
