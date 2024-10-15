@@ -8,7 +8,7 @@ class NetworkClient extends BaseServices {
     dynamic args,
     dynamic headers,
   }) async {
-    return await http.delete(Uri.parse(url));
+    return await http.delete(Uri.parse("${Config.baseUrl}$url"));
   }
 
   @override
