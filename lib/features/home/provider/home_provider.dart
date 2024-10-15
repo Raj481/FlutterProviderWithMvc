@@ -13,11 +13,13 @@ class HomeProvider extends BaseProvider {
 
   /// get user posts
   Future getUserPost() async {
-    await ApiServices.instance.getPosts().then((value) {
-      if (value != null) {
-        setPosts(jsonDecode(value));
-      }
-    });
+    await ApiServices.instance.getPosts().then(
+      (value) {
+        if (value != null) {
+          setPosts(jsonDecode(value));
+        }
+      },
+    );
   }
 
   @override
