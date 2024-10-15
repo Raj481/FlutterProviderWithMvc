@@ -31,16 +31,26 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
           ),
-          body: (controller.getPosts.isNotEmpty)
-              ? ListView.builder(
-                  itemCount: controller.getPosts.length,
-                  itemBuilder: (_, index) {
-                    return PostItemView(
-                      data: controller.getPosts[index],
-                    );
-                  },
+          body: controller.isLoading
+              ? Center(
+                  child: SizedBox(
+                    width: 40,
+                    height: 40,
+                    child: CircularProgressIndicator(
+                      color: Colors.blue,
+                    ),
+                  ),
                 )
-              : SizedBox.shrink(),
+              : (controller.getPosts.isNotEmpty)
+                  ? ListView.builder(
+                      itemCount: controller.getPosts.length,
+                      itemBuilder: (_, index) {
+                        return PostItemView(
+                          data: controller.getPosts[index],
+                        );
+                      },
+                    )
+                  : SizedBox.shrink(),
         );
       },
     );

@@ -4,6 +4,14 @@ class HomeProvider extends BaseProvider {
   dynamic _posts;
   List<dynamic> get getPosts => _posts ?? [];
 
+  bool _loading = false;
+  bool get isLoading => _loading;
+
+  setLoading(bool value) {
+    _loading = value;
+    notifyListeners();
+  }
+
   setPosts(dynamic value) {
     _posts = value;
     notifyListeners();
@@ -11,8 +19,10 @@ class HomeProvider extends BaseProvider {
 
   /// get user posts
   Future getUserPost() async {
+    setLoading(true);
     await ApiServices.instance.getPosts().then(
       (value) {
+        setLoading(false);
         if (value is SuccessResponse) {
           setPosts(value.data);
         }
