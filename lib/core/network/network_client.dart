@@ -21,20 +21,20 @@ class NetworkClient extends BaseServices {
   }
 
   @override
-  Future patch(
+  Future<http.Response> patch(
     String url, {
     dynamic args,
     dynamic headers,
-  }) {
-    throw UnimplementedError();
+  }) async {
+    return await http.patch(Uri.parse("${Config.baseUrl}$url"));
   }
 
   @override
-  Future post(
+  Future<http.Response> post(
     String url, {
     dynamic args,
     dynamic headers,
-  }) {
-    throw UnimplementedError();
+  }) async {
+    return await http.post(Uri.parse("${Config.baseUrl}$url"));
   }
 }
