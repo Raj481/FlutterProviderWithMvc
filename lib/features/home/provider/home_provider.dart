@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:provider_mvc_sample/base/base_imports.dart';
 
 class HomeProvider extends BaseProvider {
@@ -15,8 +13,8 @@ class HomeProvider extends BaseProvider {
   Future getUserPost() async {
     await ApiServices.instance.getPosts().then(
       (value) {
-        if (value != null) {
-          setPosts(jsonDecode(value));
+        if (value is SuccessResponse) {
+          setPosts(value.data);
         }
       },
     );

@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:provider_mvc_sample/base/base_imports.dart';
 import 'apis.dart';
 
@@ -8,8 +10,20 @@ class ApiServices {
 
   NetworkClient get client => NetworkClient();
 
-  Future<dynamic> getPosts() async {
+  Future<BaseResponse> getPosts() async {
     var response = await client.get(Apis.posts);
-    return response.body;
+    if (response.statusCode == 200) {
+      return SuccessResponse(
+        statusCode: response.statusCode,
+        status: "Success".toUpperCase(),
+        data: jsonDecode(
+          response.body,
+        ),
+      );
+    }
+    return FailedResponse(
+      statusCode: response.statusCode,
+      status: "Failed".toUpperCase(),
+    );
   }
 }
