@@ -18,7 +18,7 @@ class NetworkClient extends BaseServices {
     dynamic args,
     dynamic headers,
   }) async {
-    return await http.get(Uri.parse("${Apis.baseUrl}$url"));
+    return await http.get(Uri.parse("${Config.baseUrl}$url"));
   }
 
   @override

@@ -22,7 +22,7 @@ export 'package:provider_mvc_sample/base/network/models/base_model.dart';
 /// CORE imports
 export "package:provider_mvc_sample/core/network/api_services.dart";
 export "package:provider_mvc_sample/core/network/network_client.dart";
-export "package:provider_mvc_sample/core/config_res.dart";
+export "package:provider_mvc_sample/core/config/config.dart";
 
 /// Utils imports
 export "package:provider_mvc_sample/utils/global.dart";
