@@ -1,6 +1,5 @@
 import 'package:provider_mvc_sample/base/base_imports.dart';
 import 'package:http/http.dart' as http;
-import 'package:provider_mvc_sample/core/network/apis.dart';
 
 class NetworkClient extends BaseServices {
   @override
